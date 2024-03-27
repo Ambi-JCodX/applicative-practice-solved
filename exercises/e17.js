@@ -10,12 +10,24 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
-
+  let lowestValue = array[0];
+  for (let elem of array) {
+    if (cb(elem) < cb(lowestValue)) {
+       lowestValue = elem;
+    }
+  }
+  return lowestValue;
 }
 
 export function maxBy(array, cb) {
   // Your code goes here...
-
+  let highestValue = array[0];
+  for (let elem of array) {
+    if (cb(elem) > cb(highestValue)) {
+       highestValue = elem;
+    }
+  }
+  return highestValue;
 }
 
 

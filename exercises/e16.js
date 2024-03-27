@@ -11,9 +11,13 @@
 
 export function find(array, callback) {
   // Your code goes here...
-  
-}
 
+  for (let elem of array) {
+    if (callback(elem)) {
+      return elem;
+    }
+  }
+};
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"
