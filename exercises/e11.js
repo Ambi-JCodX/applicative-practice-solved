@@ -7,13 +7,9 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
-  let planets = data.planets;
-  const namesOfLowMoon = planets.filter((planet) => {
-    return (planet.moons && planet.moons.length < 10) || !planet.moons;
-  }).map((planetWithLowMoon) => {
-    return planetWithLowMoon.name;
-  });
-  return namesOfLowMoon;
+  return data.planets
+  .filter((planet) => planet.moonsCount < 10 || !planet.moonsCount)
+  .map((planet) => planet.name)
 }
 lowMoonsPlanets(data);
 
